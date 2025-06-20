@@ -1,0 +1,14 @@
+# Rust
+/target
+
+# Personal
+/prompts
+
+# Secrets
+.env
+.env.test
+
+# Test files
+testkey.hex
+.anvil.log
+.zaphenathd.log
