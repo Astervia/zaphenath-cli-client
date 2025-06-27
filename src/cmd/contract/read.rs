@@ -67,17 +67,17 @@ pub async fn handle_read_key(key_id: &str, decode: bool) -> Result<(), anyhow::E
     if decode {
         match std::str::from_utf8(&result.0) {
             Ok(s) => {
-                println!("📖 Key Data (utf-8):\n{}", s);
+                println!("{}", s);
             }
-            Err(_) => {
-                eprintln!(
-                    "⚠️ Data is not valid UTF-8. Use --decode only if the content is encoded as UTF-8."
+            Err(e) => {
+                let e = anyhow::anyhow!(
+                    "⚠️ Data is not valid UTF-8. Use --decode only if the content is encoded as UTF-8: {e:?}"
                 );
-                println!("{:?}", result);
+                return Err(e);
             }
         }
     } else {
-        println!("📦 Raw Key Data (bytes): {:?}", result);
+        println!("0x{}", hex::encode(&result.0));
     }
 
     Ok(())
