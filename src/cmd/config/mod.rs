@@ -57,6 +57,10 @@ pub enum ConfigAction {
         #[arg(long)]
         force: bool,
     },
+    /// Show the absolute path to the local Zaphenath configuration file.
+    /// This is the path used by all CLI operations unless overridden by the
+    /// ZAPHENATH_CONFIG_PATH environment variable.
+    Path,
 }
 
 pub async fn handle_config_command(action: ConfigAction) {
@@ -128,6 +132,9 @@ pub async fn handle_config_command(action: ConfigAction) {
             }
 
             println!("✅ Created new config at {:?}", path);
+        }
+        ConfigAction::Path => {
+            println!("{}", path.display());
         }
     }
 }
