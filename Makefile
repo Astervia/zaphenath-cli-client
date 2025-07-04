@@ -1,5 +1,5 @@
 # ========== Configuration ==========
-ZAPHENATH_REPO ?= ../zaphenath ABI_SRC_PATH = abi/Zaphenath.json
+ZAPHENATH_REPO ?= ../zaphenath
 ABI_REMOTE_URL=https://raw.githubusercontent.com/Astervia/zaphenath/main/abi/Zaphenath.json
 ABI_SRC_PATH ?= ./abi/Zaphenath.json
 
