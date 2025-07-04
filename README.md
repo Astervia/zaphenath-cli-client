@@ -14,7 +14,7 @@
 
 ```bash
 git clone https://github.com/Astervia/zaphenath-cli-client.git
-cd zaph-cli
+cd zaphenath-cli-client
 cargo build --release
 ```
 
@@ -141,15 +141,15 @@ The config file stores keys you've created or imported. Each entry contains:
 
 ```json
 {
-  "key_id": "my-will",
-  "owner": "0xYourAddress",
-  "contract_address": "0x...",
-  "private_key_path": "./my-key.hex",
-  "network": "anvil",
-  "rpc_url": "http://localhost:8545",
-  "timeout": 604800,
-  "custodians": [],
-  "last_ping_timestamp": 1721019123
+    "key_id": "my-will",
+    "owner": "0xYourAddress",
+    "contract_address": "0x...",
+    "private_key_path": "./my-key.hex",
+    "network": "anvil",
+    "rpc_url": "http://localhost:8545",
+    "timeout": 604800,
+    "custodians": [],
+    "last_ping_timestamp": 1721019123
 }
 ```
 
